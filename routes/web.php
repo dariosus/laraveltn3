@@ -18,6 +18,8 @@ Route::get("/saludar/{nombre}", function($nombre) {
   echo "Hola $nombre";
 });
 
+Route::get("/buscarActores/{buscar}", "ActoresController@buscar");
+
 Route::get("/agregarPelicula", "PeliculasController@agregar");
 Route::get("/peliculas/{id}", "PeliculasController@detalle");
 Route::get("/peliculas", "PeliculasController@listado");

@@ -7,10 +7,10 @@
 @section("contenido")
   <h1>Mis películas</h1>
   <ul>
-      @forelse ($peliculas as $key => $pelicula)
+      @forelse ($peliculas as $pelicula)
         <li>
-          <a href="/peliculas/<?=$key?>">
-            <?=$pelicula?>
+          <a href="/peliculas/{{$pelicula->id}}">
+            {{$pelicula->title}}
           </a>
         </li>
       @empty
